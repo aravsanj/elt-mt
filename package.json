@@ -1,5 +1,5 @@
 {
-  "name": "student_list",
+  "name": "course_list",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.19.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.407.0",
@@ -25,6 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
+    "prettier": "3.3.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
