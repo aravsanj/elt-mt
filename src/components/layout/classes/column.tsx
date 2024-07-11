@@ -14,6 +14,10 @@ export type Class = {
   timestamp: number;
 };
 
+// WARN: rendering time in server side is not recommended
+// as it can lead to UI inconsistencies during hydration on client
+// side. This is just for demonstration purposes.
+
 export const columns: ColumnDef<Class>[] = [
   {
     header: "Class name",
