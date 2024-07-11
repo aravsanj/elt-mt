@@ -1,7 +1,9 @@
-import ActionButton from "@/components/ui/Action/ActionButton";
 import { status } from "@/lib/types/status";
 import { ColumnDef } from "@tanstack/react-table";
-import Image from "next/image";
+import dayjs from "dayjs";
+import calendar from "dayjs/plugin/calendar";
+import ActionButton from "@/components/ui/Action/ActionButton";
+dayjs.extend(calendar);
 
 export type Class = {
   id: string;
@@ -9,6 +11,7 @@ export type Class = {
   status: status;
   staff: string;
   isDisabled?: boolean;
+  timestamp: number;
 };
 
 export const columns: ColumnDef<Class>[] = [
@@ -18,6 +21,7 @@ export const columns: ColumnDef<Class>[] = [
     cell: ({ row }) => {
       const index: number = row.index;
       const name: string = row.getValue("name");
+      const timestamp: number = row.original.timestamp;
 
       return (
         <div className="flex items-center gap-x-6">
@@ -28,7 +32,9 @@ export const columns: ColumnDef<Class>[] = [
             <div className="text-sm text-[#222124] tracking-tight font-semibold">
               {name}
             </div>
-            <div className="tracking-light  text-[#5F5F61]">21st June 10am</div>
+            <div className="tracking-light  text-[#5F5F61]">
+              {dayjs(timestamp).calendar()}
+            </div>
           </div>
         </div>
       );
@@ -63,12 +69,13 @@ export const columns: ColumnDef<Class>[] = [
   },
   {
     header: "Actions",
-    accessorKey: "status", // status of the class for the student
+    accessorKey: "status",
 
     cell: ({ row }) => {
       const status: status = row.getValue("status");
+      const timestamp = row.original.timestamp;
 
-      return <ActionButton status={status} />;
+      return <ActionButton status={status} timestamp={timestamp} />;
     },
   },
 ];
