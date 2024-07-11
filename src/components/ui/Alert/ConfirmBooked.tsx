@@ -28,7 +28,7 @@ export default function ConfirmBooked(props: ConfirmBookedProps) {
         <AlertDialogHeader>
           <AlertDialogTitle>Confirm booking?</AlertDialogTitle>
           <AlertDialogDescription>
-            Once you confirm, you can't undo this action.
+            Once you confirm, you cannot undo this action.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
