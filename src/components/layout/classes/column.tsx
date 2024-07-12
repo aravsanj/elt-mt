@@ -28,7 +28,7 @@ export const columns: ColumnDef<Class>[] = [
       const timestamp: number = row.original.timestamp;
 
       return (
-        <div className="flex items-center gap-x-6">
+        <div className="flex items-center gap-x-6 min-w-max">
           <span className="text-sm text-[#A1A0A3] font-medium">
             {index + 1}
           </span>
@@ -52,7 +52,7 @@ export const columns: ColumnDef<Class>[] = [
       const staff: string = row.getValue("staff");
 
       return (
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center gap-x-4 min-w-max">
           <img
             src={`https://api.dicebear.com/9.x/pixel-art/svg?seed=${staff}`}
             width={40}

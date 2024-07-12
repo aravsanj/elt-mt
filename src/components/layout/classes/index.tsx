@@ -23,7 +23,7 @@ export default function ClassList() {
   }, [isBookedChecked]);
 
   return (
-    <div className="w-[642px] h-[880px] rounded-lg space-y-4 bg-white p-4">
+    <div className="w-[650px] h-[880px] rounded-lg space-y-4 bg-white p-4">
       <div className="flex justify-between">
         <div>
           <p className="text-2xl text-[#313336] font-semibold">
