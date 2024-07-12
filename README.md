@@ -15,7 +15,8 @@
 
 [spotify-ruby-psi.vercel.app](https://elt-mt.vercel.app/)
 
-> [!IMPORTANT] > **This project was done as part of a machine test.**
+> [!IMPORTANT]
+> > **This project was done as part of a machine test.**
 
 ## 🚀 Getting Started
 
