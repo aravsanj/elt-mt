@@ -78,7 +78,7 @@ export default function ActionButton(props: ActionButtonProps) {
     setToggleBooked(true);
   }
 
-  // if (!isBooked) return <ConfirmBooked onConfirm={handleBookNow} />;
+  if (!isBooked) return <ConfirmBooked onConfirm={handleBookNow} />;
 
   return (
     <Button
