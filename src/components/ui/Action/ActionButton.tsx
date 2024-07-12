@@ -82,6 +82,7 @@ export default function ActionButton(props: ActionButtonProps) {
 
   return (
     <Button
+      data-testid="action-button"
       variant={variant[status]}
       className={`${styles[status]} w-[150px] flex gap-x-2`}
     >
